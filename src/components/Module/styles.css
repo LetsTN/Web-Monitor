@@ -1,0 +1,23 @@
+div.module {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  width: 100%;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+div.module-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 75%;
+
+  background-color: var(--color-white);
+  border-radius: 8px;
+}
+

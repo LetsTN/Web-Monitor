@@ -1,0 +1,38 @@
+div.alert {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  width: 150px;
+}
+
+p.alert {
+  padding: 10px;  
+  text-align: center;
+  border-radius: 8px;
+}
+
+p.null {
+  background-color: var(--color-gray);
+  color: var(--color-black);
+}
+
+p.ok {
+  background-color: var(--color-green);
+  color: var(--color-black);
+}
+
+p.alerta {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+}
+
+p.perigo {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+strong.small {
+  font-size: 1.4rem;
+  margin-bottom: 2px;
+}

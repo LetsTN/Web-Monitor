@@ -1,0 +1,18 @@
+h1 a {
+  align-self: start;
+  margin-left: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+  color: var(--color-primary);
+  font-weight: 300;
+  font-size: 2.4rem;
+}
+
+div.chart-area{
+  width: 90%;
+}
+
+div.chart {
+  margin-bottom: 10px;
+}

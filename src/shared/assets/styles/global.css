@@ -1,0 +1,50 @@
+:root {
+  font-size: 60%;
+
+  --color-background: #D4D4D4;
+  --color-primary: #3A5DB9;
+  --color-primary-light: #86A8FF;
+  --color-red: #BE1931;
+  --color-green: #74A827;
+  --color-yellow: #E4BA14;
+  --color-gray: #C4C4C4;
+  --color-dark-gray: #2C2C2C;
+  --color-text-base: #2C2C2C;
+  --color-white: #fff;
+  --color-black: #000;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100vh;
+}
+
+body {
+  background: var(--color-background);
+}
+
+body,
+input,
+button,
+textarea {
+  font: 300 1.6rem Archivo;
+  color: var(--color-text-base);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 700px) {
+  :root {
+    font-size: 62.5%;
+  }
+}
