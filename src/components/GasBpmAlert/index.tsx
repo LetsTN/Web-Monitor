@@ -64,17 +64,16 @@ const GasBpmAlert: FC<GasBpmAlertProps> = ({ level, type, label }) => {
 
   return (
     <>
-    {(level) ? 
       <div className="alert">
         <strong className={type === 'gas' ? 'regular' : 'small'}>{label}: </strong>
-        <p className={ 'alert ' + getClassName()}>{level.toFixed(2)} {type === 'gas' ? 'ppm' : 'bpm'}</p>
+
+        {(level) ? 
+          <p className={ 'alert ' + getClassName()}>{level.toFixed(2)} {type === 'gas' ? 'ppm' : 'bpm'}</p>
+        : 
+          <p className="alert null">N/A {type === 'gas' ? 'ppm' : 'bpm'}</p>
+        }
+
       </div>
-    :
-      <div className="alert">
-        <strong className={type === 'gas' ? 'regular' : 'small'}>{label}: </strong>
-        <p className="alert null">N/A {type === 'gas' ? 'ppm' : 'bpm'}</p>
-      </div>
-    }
     </>
   )
 }
