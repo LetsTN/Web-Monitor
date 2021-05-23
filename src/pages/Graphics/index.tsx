@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-
-import api from '../../shared/services/api';
+import api from '../../services/api';
 import Header from '../../components/Header';
 import DataChart from '../../components/DataChart';
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import api from '../../shared/services/api';
+import api from '../../services/api';
 import Module from '../../components/Module';
 import Header from '../../components/Header';
 
