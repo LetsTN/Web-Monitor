@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Chart } from "react-google-charts";
+import { Chart } from 'react-google-charts';
 
 import './styles.css';
 
@@ -12,7 +12,7 @@ export interface DataChartProps {
 const DataChart: FC<DataChartProps> = ({data, label, valueType}) => {
   return (
     <Chart
-      chartType="LineChart"
+      chartType='LineChart'
       loader={<div className="loader"> Carregando gráfico... </div>}
       data={data}
       options={{

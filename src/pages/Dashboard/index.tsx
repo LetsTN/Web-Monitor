@@ -21,13 +21,16 @@ export class Dashboard extends Component<{}, DashboardState> {
   // quais estados podemos setar (definimos lá em cima)
   // -- não nescessariamente precisamos setar todos os estados definidos --
   async tick() {
-    const response = await api.get('reading');
-    console.log(response);
+    try {
+      const response = await api.get('reading');
 
-    this.setState({
-      readings: response.data.readings || {},
-      modules: Object.keys(response.data.readings) || []
-    });
+      this.setState({
+        readings: response.data.readings || {},
+        modules: Object.keys(response.data.readings) || []
+      });
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   // Após a montagem do componente, mudaremos o estado dele a cada 5 segundos

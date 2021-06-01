@@ -33,21 +33,23 @@ export class Graphics extends Component<GraphicsProps, GraphicsState> {
   // quais estados podemos setar (definimos lá em cima)
   // -- não nescessariamente precisamos setar todos os estados definidos --
   async tick(module: string) {
-    const response = await api.get(`reading/${module}`);
+    try {
+      const response = await api.get(`reading/${module}`);
 
-    this.setState({
-      co: response.data.readings.co || [],
-      glp: response.data.readings.glp || [],
-      bpm: response.data.readings.bpm || [],
-    });
+      this.setState({
+        co: response.data.readings.co || [],
+        glp: response.data.readings.glp || [],
+        bpm: response.data.readings.bpm || [],
+      });
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   // Após a montagem do componente, mudaremos o estado dele a cada 5 segundos
   async componentDidMount() {
 
     const module = this.props.match.params.module;
-
-    console.log(module);
 
     // inicializamos nosso state
     await this.tick(module);
